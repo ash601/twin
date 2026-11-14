@@ -1,8 +1,8 @@
 # Twin
 
-[![Watch the 19-second video](media/twin-explainer.jpg)](media/twin-explainer.mp4)
+[![Watch the video](media/twin-preview.gif)](https://ash601.github.io/twin/)
 
-▶ **[Watch the 19-second video](media/twin-explainer.mp4)**
+▶ **[Watch with sound + download](https://ash601.github.io/twin/)**
 
 You on camera without filming. Upload a photo, add your voice, get a talking video made by HeyGen.
 
