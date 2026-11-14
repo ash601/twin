@@ -1,0 +1,25 @@
+{
+  "name": "twin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Twin: you on camera without filming. Pick a HeyGen look or a photo, give it your voice, get an mp4.",
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1 -p 3960",
+    "build": "next build",
+    "start": "next start -H 127.0.0.1 -p 3960"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "4.3.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": { "node": ">=20.9" }
+}

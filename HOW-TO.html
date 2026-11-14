@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin: how to</title>
+<style>
+  :root { color-scheme: dark; --bg:#0d0a08; --ivory:#f2ede6; --mist:#a89a8e; --ember:#f55c2f; --edge:rgba(242,237,230,.14); --fill:rgba(242,237,230,.06); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ivory); font:15px/1.6 "Inter Tight", system-ui, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  .eyebrow { font: 11px/1 ui-monospace, "Roboto Mono", monospace; letter-spacing: .22em; text-transform: uppercase; color: var(--mist); margin: 34px 0 12px; }
+  h1 { font: 400 40px/1 Georgia, "Playfair Display", serif; letter-spacing: -.02em; margin: 6px 0 10px; }
+  p { margin: 0 0 10px; }
+  .muted { color: var(--mist); }
+  .box { border:1px solid var(--edge); background:var(--fill); border-radius:12px; padding:14px 16px; margin: 0 0 10px; }
+  ol { padding-left: 22px; margin: 0; } ol li { margin: 0 0 12px; }
+  ul { padding-left: 20px; margin: 0; } ul li { margin: 0 0 6px; }
+  a { color: var(--ember); }
+  code, pre { font: 13px/1.5 ui-monospace, "Roboto Mono", monospace; }
+  code { background: rgba(0,0,0,.35); border:1px solid var(--edge); border-radius:5px; padding:1px 5px; }
+  pre { background: rgba(0,0,0,.35); border:1px solid var(--edge); border-radius:8px; padding:10px 12px; white-space: pre-wrap; word-break: break-word; margin: 8px 0 0; }
+  .two { display:grid; gap:10px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 640px) { .two { grid-template-columns: 1fr; } }
+  .tag { display:inline-block; font: 10px/1 ui-monospace, monospace; letter-spacing:.12em; padding:3px 6px; border-radius:3px; background: var(--ember); color:#1a0a05; vertical-align: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Make</div>
+  <h1>Twin</h1>
+  <p class="muted">You on camera without filming. Pick how you look (a HeyGen avatar or a photo of you), give it your voice (record it, or type it), and HeyGen makes the video. It lands in the app as a real mp4.</p>
+
+  <div class="eyebrow">What you need</div>
+  <div class="box">
+    <ul>
+      <li><b>Node.js</b> 20 or newer: <a href="https://nodejs.org">nodejs.org</a> (the LTS button).</li>
+      <li><b>ffmpeg</b>, for your voice takes and thumbnails. Windows: <code>winget install ffmpeg</code>. Mac: <code>brew install ffmpeg</code>.</li>
+      <li><b>A HeyGen account</b>, connected one of two ways (you pick in the app, and can switch any time):</li>
+    </ul>
+    <div class="two" style="margin-top:10px">
+      <div class="box" style="margin:0">
+        <b>Connect my HeyGen account</b><br>
+        <span class="muted">Uses your HeyGen subscription credits.</span>
+        <p style="margin-top:8px"><span class="tag">CLAUDE CODE REQUIRED</span> This way, Claude Code makes the video for you with its HeyGen connector.
+          <a href="https://code.claude.com/docs/en/setup">Install Claude Code</a>, then on
+          <a href="https://claude.ai/settings/connectors">claude.ai → Settings → Connectors</a> turn on <b>HeyGen</b> and log in.</p>
+      </div>
+      <div class="box" style="margin:0">
+        <b>Paste API key</b><br>
+        <span class="muted">Pay per second from your HeyGen API balance. No Claude needed.</span>
+        <p style="margin-top:8px">Get a key at <a href="https://platform.heygen.com/api-keys">platform.heygen.com → API keys</a> and add some balance. Prices: <a href="https://platform.heygen.com/pricing">platform.heygen.com/pricing</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="eyebrow">4 steps</div>
+  <div class="box">
+    <ol>
+      <li><b>Double-click START</b>: <code>START.cmd</code> on Windows, <code>START.command</code> on a Mac. The first time it installs and builds (a couple of minutes), then the app opens at <code>http://localhost:3960</code>.<br>
+        <span class="muted">Mac says it can't open it? Right-click START.command → Open → Open. Or in Terminal: <code>chmod +x START.command</code>.</span></li>
+      <li><b>Connect HeyGen</b> on the strip at the top. Pick one way. It shows <b>● Connected</b> when it works. The account way also shows <b>● Claude found</b> (or ✕ Claude not found, with an install link).</li>
+      <li><b>Bring in your looks</b>: press <b>Refresh my looks</b>. Or use your own photos: press <b>Add photos</b> and drop pictures of you into the folder (or onto the screen).</li>
+      <li><b>Make it</b>: pick a look, record your voice (or type a script and pick the voice that reads it), pick the shape, and press <b>Make with Claude</b> / <b>Make video</b>. It shows up under Your videos in a few minutes.</li>
+    </ol>
+  </div>
+
+  <div class="eyebrow">Prompt for Claude (account way)</div>
+  <div class="box">
+    <p class="muted">The app shows this with your folder filled in, with Copy and <b>Open Claude here</b> buttons. You can also paste it into Claude Code yourself, opened in the <code>my-twin</code> folder:</p>
+    <pre>Set up my Twin app in this folder (&lt;your Twin folder&gt;/my-twin): check the HeyGen connector is connected, list my HeyGen looks and voices into looks.json and voices.json (follow CLAUDE.md here), and tell me if anything is missing.</pre>
+  </div>
+
+  <div class="eyebrow">What you get</div>
+  <div class="box">
+    <ul>
+      <li>Real mp4s of you talking, in 9:16, 16:9 or 1:1, with your room or a green screen.</li>
+      <li><b>Place it</b>: see your video sitting over any screenshot (green keyed out live).</li>
+      <li>Everything stays on your computer in <code>my-twin/</code>: photos, voice takes, videos, and your key (if you pasted one). Deleted videos go to <code>my-twin/.trash</code>.</li>
+      <li><b>Turn off</b> (top right) stops the app. Double-click START to open it again.</li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
