@@ -1,5 +1,9 @@
 # Twin
 
+[![Watch the 19-second video](media/twin-explainer.jpg)](media/twin-explainer.mp4)
+
+▶ **[Watch the 19-second video](media/twin-explainer.mp4)**
+
 You on camera without filming. Upload a photo, add your voice, get a talking video made by HeyGen.
 
 ## Use it
