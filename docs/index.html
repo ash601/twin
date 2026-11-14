@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Twin · free app</title>
+<meta property="og:title" content="Twin: make a video of you without filming">
+<meta property="og:description" content="Upload a photo, add your voice, get a talking video. Free.">
+<meta property="og:image" content="https://ash601.github.io/twin/twin-explainer.jpg">
+<style>
+:root{--bg:#120d0b;--ink:#f3ece4;--mist:#a89c92;--ember:#f55c2f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,Segoe UI,sans-serif}
+main{max-width:860px;margin:0 auto;padding:40px 16px 70px}
+h1{font-size:44px;margin:0;letter-spacing:-.02em}p.sub{color:var(--mist);margin:6px 0 22px}
+video{width:100%;border-radius:14px;background:#000;display:block}
+.dl{display:inline-block;margin:24px 0 8px;background:var(--ember);color:#1a0a05;font-weight:700;padding:14px 26px;border-radius:10px;text-decoration:none;font-size:18px}
+ol{padding-left:22px}li{margin:6px 0}.small{color:var(--mist);font-size:14px}a{color:var(--ember)}
+</style></head><body><main>
+<h1>Twin</h1>
+<p class="sub">You on camera without filming. Upload a photo, add your voice, get a talking video.</p>
+<video src="twin-explainer.mp4" poster="twin-explainer.jpg" controls playsinline preload="metadata"></video>
+<a class="dl" href="https://github.com/ash601/twin/archive/refs/heads/main.zip">Download free</a>
+<ol>
+<li>Unzip it.</li>
+<li>Double-click <b>START.cmd</b> (Windows) or <b>START.command</b> (Mac).</li>
+<li>Connect HeyGen at the top.</li>
+<li>Upload your photo → add your audio → <b>Make video</b>.</li>
+</ol>
+<p class="small">Needs <a href="https://nodejs.org">Node.js</a> and <a href="https://ffmpeg.org">ffmpeg</a>. Code: <a href="https://github.com/ash601/twin">github.com/ash601/twin</a></p>
+</main></body></html>
