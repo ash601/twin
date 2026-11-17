@@ -4,7 +4,7 @@
 
 ▶ **[Watch with sound + download](https://ash601.github.io/twin/)**
 
-You on camera without filming. Upload a photo, add your voice, get a talking video made by HeyGen.
+Make videos of you without filming. Add your photo and voice, get a video of you talking (made by HeyGen).
 
 ## Use it
 1. **Download** this folder: green **Code** button → **Download ZIP**, then unzip it.
